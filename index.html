@@ -42,53 +42,239 @@
   "description": "Quick Red Tech is a forward-thinking tech brand created by Chisom Life Eke. We build smart tools for developers, automating Python, Node.js, Java & Ruby workflows. Visit our websites: Quick Red Tech Portfolio and StackCheckMate."
 }
 </script>
+
 <style>
 /* ===== Base ===== */
-* {margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-body {background:#0a0a0a; color:#fff; overflow-x:hidden; position:relative;}
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background:#0a0a0a;
+  color:#fff;
+  overflow-x:hidden;
+  position:relative;
+}
 
 /* ===== Navbar ===== */
-nav {display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#0a0a0a; border-bottom:1px solid rgba(255,255,255,0.1);}
-nav .logo {display:flex; align-items:center; gap:0.5rem;}
-nav .logo img {width:40px;height:40px;}
-nav ul {display:flex; list-style:none; gap:2rem;}
-nav ul li a {color:#fff; font-weight:bold; text-decoration:none; transition:0.3s;}
-nav ul li a:hover {color:#ff0000;}
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 2rem;
+  background:#0a0a0a;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  flex-wrap:wrap;
+}
+nav .logo {
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+}
+nav .logo img {
+  width:40px;
+  height:40px;
+}
+nav .menu-toggle {
+  display:none;
+  font-size:2rem;
+  color:#ff0000;
+  cursor:pointer;
+}
+nav ul {
+  display:flex;
+  list-style:none;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+nav ul li a {
+  color:#fff;
+  font-weight:bold;
+  text-decoration:none;
+  padding:0.5rem 1rem;
+  border-radius:50%;
+  background:#ff0000;
+  transition:0.3s;
+  display:inline-block;
+  text-align:center;
+}
+nav ul li a:hover {
+  background:#c00;
+  transform:scale(1.1);
+}
 
 /* ===== Hero Section ===== */
-.hero {min-height:80vh; display:flex; justify-content:center; align-items:center; text-align:center; position:relative; background:linear-gradient(135deg,#111,#000);}
-.hero::before {content:""; position:absolute; inset:0; background:rgba(0,0,0,0.6);}
-.hero-content {position:relative; z-index:1; opacity:0; transform:translateY(20px); transition: all 0.8s ease-out;}
-.hero-content.visible {opacity:1; transform:translateY(0);}
-.hero-content h1 {font-size:3rem; color:#ff0000; text-shadow:2px 2px 8px #000; margin-bottom:1rem;}
-.hero-content p {font-size:1.2rem; margin-bottom:2rem;}
-.hero-content .btn {padding:0.8rem 2rem; background:#ff0000; color:#fff; border-radius:8px; font-weight:bold; transition:0.3s; display:inline-block;}
-.hero-content .btn:hover {background:#c00; transform:scale(1.05);}
+.hero {
+  min-height:80vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  background:linear-gradient(135deg,#111,#000);
+}
+.hero::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+.hero-content {
+  position:relative;
+  z-index:1;
+  opacity:0;
+  transform:translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.hero-content.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+.hero-content h1 {
+  font-size:3rem;
+  color:#ff0000;
+  text-shadow:2px 2px 8px #000;
+  margin-bottom:1rem;
+}
+.hero-content p {
+  font-size:1.2rem;
+  margin-bottom:2rem;
+}
+.hero-content .btn {
+  padding:0.8rem 2rem;
+  background:#ff0000;
+  color:#fff;
+  border-radius:8px;
+  font-weight:bold;
+  transition:0.3s;
+  display:inline-block;
+}
+.hero-content .btn:hover {
+  background:#c00;
+  transform:scale(1.05);
+}
 
 /* ===== Sections ===== */
-section {padding:5rem 2rem; text-align:center;}
-section h2 {font-size:2.5rem; color:#ff0000; margin-bottom:2rem; opacity:0; transform:translateY(20px); transition:all 0.8s ease-out;}
-section.visible h2 {opacity:1; transform:translateY(0);}
-.about p, .contact p {max-width:700px; margin:auto; font-size:1.1rem; line-height:1.8; color:#ccc; opacity:0; transform:translateY(20px); transition:all 0.8s ease-out;}
-section.visible p {opacity:1; transform:translateY(0);}
+section {
+  padding:5rem 2rem;
+  text-align:center;
+}
+section h2 {
+  font-size:2.5rem;
+  color:#ff0000;
+  margin-bottom:2rem;
+  opacity:0;
+  transform:translateY(20px);
+  transition:all 0.8s ease-out;
+}
+section.visible h2 {
+  opacity:1;
+  transform:translateY(0);
+}
+.about p, .contact p {
+  max-width:700px;
+  margin:auto;
+  font-size:1.1rem;
+  line-height:1.8;
+  color:#ccc;
+  opacity:0;
+  transform:translateY(20px);
+  transition:all 0.8s ease-out;
+}
+section.visible p {
+  opacity:1;
+  transform:translateY(0);
+}
 
 /* ===== Projects ===== */
-.project-cards {display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;}
-.project-cards .card {background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.2); border-radius:20px; width:300px; padding:1rem; transition:transform 0.3s, box-shadow 0.3s;}
-.project-cards .card:hover {transform:translateY(-10px) scale(1.02); box-shadow:0 0 20px #ff0000;}
-.project-cards .card img {width:100%; border-radius:12px; margin-bottom:1rem;}
-.project-cards .card h3 {color:#fff; margin-bottom:0.5rem;}
-.project-cards .card p {color:#ccc; font-size:1rem;}
+.project-cards {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:2rem;
+}
+.project-cards .card {
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:20px;
+  width:300px;
+  padding:1rem;
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.project-cards .card:hover {
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 0 20px #ff0000;
+}
+.project-cards .card img {
+  width:100%;
+  border-radius:12px;
+  margin-bottom:1rem;
+}
+.project-cards .card h3 {
+  color:#fff;
+  margin-bottom:0.5rem;
+}
+.project-cards .card p {
+  color:#ccc;
+  font-size:1rem;
+}
 
 /* ===== Footer ===== */
-footer {padding:2rem; background:rgba(255,255,255,0.05); border-top:1px solid rgba(255,255,255,0.2); text-align:center; color:#aaa;}
+footer {
+  padding:2rem;
+  background:rgba(255,255,255,0.05);
+  border-top:1px solid rgba(255,255,255,0.2);
+  text-align:center;
+  color:#aaa;
+}
 
-/* ===== Floating Tags (Matrix Style) ===== */
-.floating-tag {position:absolute; font-size:1.8rem; color:#ff0000; pointer-events:none; user-select:none; animation:floatTag linear infinite;}
-@keyframes floatTag {0% {transform:translateY(100vh) rotate(0deg);} 100% {transform:translateY(-10vh) rotate(360deg);}}
+/* ===== Floating Tags ===== */
+.floating-tag {
+  position:absolute;
+  font-size:1.8rem;
+  color:#ff0000;
+  pointer-events:none;
+  user-select:none;
+  animation:floatTag linear infinite;
+}
+@keyframes floatTag {
+  0% {transform:translateY(100vh) rotate(0deg);}
+  100% {transform:translateY(-10vh) rotate(360deg);}
+}
 
-/* ===== Utility ===== */
-body, html {height:100%;}
+/* ===== Responsive Mobile ===== */
+@media screen and (max-width:768px) {
+  nav .menu-toggle {
+    display:block;
+  }
+  nav ul {
+    display:none;
+    flex-direction:column;
+    gap:0.5rem;
+    width:100%;
+    align-items:center;
+    margin-top:1rem;
+  }
+  nav ul.show {
+    display:flex;
+  }
+  nav ul li a {
+    width:60px;
+    height:60px;
+    font-size:0.9rem;
+  }
+  .hero-content h1 {
+    font-size:2rem;
+  }
+  .hero-content p {
+    font-size:1rem;
+  }
+  section h2 {
+    font-size:2rem;
+  }
+}
 </style>
 </head>
 
@@ -100,6 +286,7 @@ body, html {height:100%;}
     <img src="assets/images/logo.png" alt="Logo">
     <span>Quick Red Tech</span>
   </div>
+  <div class="menu-toggle">&#9776;</div>
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -133,6 +320,7 @@ body, html {height:100%;}
       <img src="assets/images/project1.png" alt="Project 1">
       <h3>StackCheckMate</h3>
       <p>Universal developer toolkit automating Python, Node.js, Java & Ruby environments.</p>
+      <a href="https://qrtquick.github.io/stackcheckmate/" target="_blank" class="btn" style="border-radius:8px;padding:0.8rem 1rem;">Check StackCheckMate</a>
     </div>
   </div>
 </section>
@@ -150,7 +338,7 @@ body, html {height:100%;}
   <p>“Innovation through code — one stack at a time.”</p>
 </footer>
 
-<!-- ===== Floating Tags JS ===== -->
+<!-- ===== Floating Tags JS & Navbar Toggle ===== -->
 <script>
 // Generate floating < /> tags
 for(let i=0;i<30;i++){
@@ -164,7 +352,7 @@ for(let i=0;i<30;i++){
   document.body.appendChild(tag);
 }
 
-// ===== Scroll-trigger animations =====
+// Scroll-trigger animations
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
@@ -175,7 +363,13 @@ const observer = new IntersectionObserver(entries => {
 },{threshold:0.3});
 
 document.querySelectorAll('.hero-content, section').forEach(el => observer.observe(el));
-</script>
 
-</body>
-</html>
+
+// Navbar toggle for mobile
+const toggle = document.querySelector('.menu-toggle');
+const navUl = document.querySelector('nav ul');
+
+toggle.addEventListener('click', () => {
+  navUl.classList.toggle('show');
+});
+</script>
