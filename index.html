@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Red Tech | Portfolio of Chisom Life Eke</title>
+<link rel="icon" href="assets/images/logo.png" type="image/png">
+
+<!-- ===== SEO Meta Tags ===== -->
+<meta name="description" content="Quick Red Tech is a forward-thinking tech brand created by Chisom Life Eke. We build smart tools for developers, automating Python, Node.js, Java & Ruby workflows.">
+<meta name="keywords" content="Quick Red Tech, Chisom Life Eke, Developer Tools, Python Automation, JavaScript Automation, Ruby Tools, Software Development, Tech Brand, Portfolio, Programming Tools">
+<meta name="author" content="Chisom Life Eke">
+<meta name="robots" content="index, follow">
+
+<!-- ===== Open Graph ===== -->
+<meta property="og:title" content="Quick Red Tech | Portfolio of Chisom Life Eke">
+<meta property="og:description" content="Quick Red Tech is a tech brand founded by Chisom Life Eke, creating smart developer tools for Python, Java, Node.js, and Ruby.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsite.com">
+<meta property="og:image" content="https://yourwebsite.com/assets/images/logo.png">
+
+<!-- ===== Twitter Card ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quick Red Tech | Portfolio of Chisom Life Eke">
+<meta name="twitter:description" content="Quick Red Tech is a tech brand created by Chisom Life Eke, building innovative developer tools for all skill levels.">
+<meta name="twitter:image" content="https://yourwebsite.com/assets/images/logo.png">
+
+<!-- ===== Structured Data ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Quick Red Tech",
+  "founder": {"@type": "Person","name": "Chisom Life Eke"},
+  "url": "https://yourwebsite.com",
+  "logo": "https://yourwebsite.com/assets/images/logo.png",
+  "sameAs": ["https://github.com/ChisomLifeEke"],
+  "description": "Quick Red Tech is a forward-thinking tech brand created by Chisom Life Eke. We build smart tools for developers, automating Python, Node.js, Java & Ruby workflows."
+}
+</script>
+
+<style>
+/* ===== Base ===== */
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+body {background:#0a0a0a; color:#fff; overflow-x:hidden; position:relative;}
+
+/* ===== Navbar ===== */
+nav {display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#0a0a0a; border-bottom:1px solid rgba(255,255,255,0.1);}
+nav .logo {display:flex; align-items:center; gap:0.5rem;}
+nav .logo img {width:40px;height:40px;}
+nav ul {display:flex; list-style:none; gap:2rem;}
+nav ul li a {color:#fff; font-weight:bold; text-decoration:none; transition:0.3s;}
+nav ul li a:hover {color:#ff0000;}
+
+/* ===== Hero Section ===== */
+.hero {min-height:80vh; display:flex; justify-content:center; align-items:center; text-align:center; position:relative; background:linear-gradient(135deg,#111,#000);}
+.hero::before {content:""; position:absolute; inset:0; background:rgba(0,0,0,0.6);}
+.hero-content {position:relative; z-index:1; opacity:0; transform:translateY(20px); transition: all 0.8s ease-out;}
+.hero-content.visible {opacity:1; transform:translateY(0);}
+.hero-content h1 {font-size:3rem; color:#ff0000; text-shadow:2px 2px 8px #000; margin-bottom:1rem;}
+.hero-content p {font-size:1.2rem; margin-bottom:2rem;}
+.hero-content .btn {padding:0.8rem 2rem; background:#ff0000; color:#fff; border-radius:8px; font-weight:bold; transition:0.3s; display:inline-block;}
+.hero-content .btn:hover {background:#c00; transform:scale(1.05);}
+
+/* ===== Sections ===== */
+section {padding:5rem 2rem; text-align:center;}
+section h2 {font-size:2.5rem; color:#ff0000; margin-bottom:2rem; opacity:0; transform:translateY(20px); transition:all 0.8s ease-out;}
+section.visible h2 {opacity:1; transform:translateY(0);}
+.about p, .contact p {max-width:700px; margin:auto; font-size:1.1rem; line-height:1.8; color:#ccc; opacity:0; transform:translateY(20px); transition:all 0.8s ease-out;}
+section.visible p {opacity:1; transform:translateY(0);}
+
+/* ===== Projects ===== */
+.project-cards {display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;}
+.project-cards .card {background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.2); border-radius:20px; width:300px; padding:1rem; transition:transform 0.3s, box-shadow 0.3s;}
+.project-cards .card:hover {transform:translateY(-10px) scale(1.02); box-shadow:0 0 20px #ff0000;}
+.project-cards .card img {width:100%; border-radius:12px; margin-bottom:1rem;}
+.project-cards .card h3 {color:#fff; margin-bottom:0.5rem;}
+.project-cards .card p {color:#ccc; font-size:1rem;}
+
+/* ===== Footer ===== */
+footer {padding:2rem; background:rgba(255,255,255,0.05); border-top:1px solid rgba(255,255,255,0.2); text-align:center; color:#aaa;}
+
+/* ===== Floating Tags (Matrix Style) ===== */
+.floating-tag {position:absolute; font-size:1.8rem; color:#ff0000; pointer-events:none; user-select:none; animation:floatTag linear infinite;}
+@keyframes floatTag {0% {transform:translateY(100vh) rotate(0deg);} 100% {transform:translateY(-10vh) rotate(360deg);}}
+
+/* ===== Utility ===== */
+body, html {height:100%;}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="Logo">
+    <span>Quick Red Tech</span>
+  </div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://github.com/ChisomLifeEke" target="_blank">GitHub</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<header id="home" class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Quick Red Tech</h1>
+    <p>Portfolio of <strong>Chisom Life Eke</strong> — Innovating Developer Tools</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+</header>
+
+<!-- About -->
+<section id="about">
+  <h2>About Quick Red Tech</h2>
+  <p><strong>Quick Red Tech</strong> is a forward-thinking tech brand founded by <strong>Chisom Life Eke</strong>. We build smart tools that make software development easier for beginners and expert developers, helping them improve workflow, automate tasks, and focus on creativity.</p>
+  <p>Our products cover Python, Node.js, Java, Ruby, and more, providing modern, reliable solutions for all developers.</p>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-cards">
+    <div class="card">
+      <img src="assets/images/project1.png" alt="Project 1">
+      <h3>StackCheckMate</h3>
+      <p>Universal developer toolkit automating Python, Node.js, Java & Ruby environments.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:quickredtech@gmail.com" style="color:#ff0000;">quickredtech@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/ChisomLifeEke" target="_blank" style="color:#ff0000;">https://github.com/ChisomLifeEke</a></p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Quick Red Tech | Portfolio of Chisom Life Eke</p>
+  <p>“Innovation through code — one stack at a time.”</p>
+</footer>
+
+<!-- ===== Floating Tags JS ===== -->
+<script>
+// Generate floating < /> tags
+for(let i=0;i<30;i++){
+  const tag = document.createElement('div');
+  tag.className = 'floating-tag';
+  tag.textContent = '</>';
+  tag.style.left = Math.random()*window.innerWidth+'px';
+  tag.style.fontSize = 16 + Math.random()*24 + 'px';
+  tag.style.animationDuration = (3 + Math.random()*3)+'s';
+  tag.style.animationDelay = Math.random()*5+'s';
+  document.body.appendChild(tag);
+}
+
+// ===== Scroll-trigger animations =====
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.3});
+
+document.querySelectorAll('.hero-content, section').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
