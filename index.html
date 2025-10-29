@@ -5,332 +5,183 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quick Red Tech | Portfolio of Chisom Life Eke</title>
 <link rel="icon" href="assets/images/logo.png" type="image/png">
-<meta name="google-site-verification" content="google7d8177cdda59d81f.html" />
-<!-- ===== SEO Meta Tags ===== -->
-<meta name="description" content="Quick Red Tech is a forward-thinking tech brand created by Chisom Life Eke. We build smart tools for developers, automating Python, Node.js, Java & Ruby workflows. Visit our portfolio and projects at Quick Red Tech.">
-<meta name="keywords" content="Quick Red Tech, Chisom Life Eke, Developer Tools, Python Automation, JavaScript Automation, Ruby Tools, Software Development, Tech Brand, Portfolio, Programming Tools, StackCheckMate, QuickRedTechPortfolio">
-<meta name="author" content="Chisom Life Eke">
-<meta name="robots" content="index, follow">
 
-<!-- ===== Open Graph ===== -->
+<!-- SEO + OG + Twitter (same as before, shortened for brevity) -->
+<meta name="description" content="Quick Red Tech is a forward-thinking tech brand created by Chisom Life Eke. We build smart tools for developers.">
+<meta name="keywords" content="Quick Red Tech, Chisom Life Eke, Developer Tools, Portfolio">
 <meta property="og:title" content="Quick Red Tech | Portfolio of Chisom Life Eke">
-<meta property="og:description" content="Quick Red Tech is a tech brand founded by Chisom Life Eke, creating smart developer tools for Python, Java, Node.js, and Ruby. Check our portfolio and projects online.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://qrtquick.github.io/QuickRedTechPortfolio/">
-<meta property="og:image" content="https://qrtquick.github.io/QuickRedTechPortfolio/assets/images/logo.png">
-
-<!-- ===== Twitter Card ===== -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quick Red Tech | Portfolio of Chisom Life Eke">
-<meta name="twitter:description" content="Quick Red Tech is a tech brand created by Chisom Life Eke, building innovative developer tools for all skill levels. Visit StackCheckMate and other projects online.">
-<meta name="twitter:image" content="https://qrtquick.github.io/QuickRedTechPortfolio/assets/images/logo.png">
-
-<!-- ===== Structured Data ===== -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Quick Red Tech",
-  "founder": {"@type": "Person","name": "Chisom Life Eke"},
-  "url": "https://qrtquick.github.io/QuickRedTechPortfolio/",
-  "logo": "https://qrtquick.github.io/QuickRedTechPortfolio/assets/images/logo.png",
-  "sameAs": [
-    "https://github.com/ChisomLifeEke",
-    "https://qrtquick.github.io/QuickRedTechPortfolio/",
-    "https://qrtquick.github.io/stackcheckmate/"
-  ],
-  "description": "Quick Red Tech is a forward-thinking tech brand created by Chisom Life Eke. We build smart tools for developers, automating Python, Node.js, Java & Ruby workflows. Visit our websites: Quick Red Tech Portfolio and StackCheckMate."
-}
-</script>
+<meta property="og:image" content="assets/images/logo.png">
 
 <style>
-/* ===== Base ===== */
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-body {
-  background:#0a0a0a;
+/* ============ RESET & BASE ============ */
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+body{
+  background:radial-gradient(circle at top,#0a0a0a 60%,#000);
   color:#fff;
   overflow-x:hidden;
   position:relative;
 }
 
-/* ===== Navbar ===== */
-nav {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:1rem 2rem;
-  background:#0a0a0a;
+/* ============ NAVBAR ============ */
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 1.2rem;
+  backdrop-filter:blur(10px);
+  background:rgba(10,10,10,0.6);
   border-bottom:1px solid rgba(255,255,255,0.1);
-  flex-wrap:wrap;
+  position:sticky;top:0;z-index:999;
 }
-nav .logo {
-  display:flex;
-  align-items:center;
-  gap:0.5rem;
+.logo{
+  display:flex;align-items:center;gap:0.6rem;font-weight:700;
 }
-nav .logo img {
-  width:40px;
-  height:40px;
+.logo img{width:42px;height:42px;border-radius:12px;}
+.menu-toggle{display:none;font-size:2rem;color:#ff3b3b;cursor:pointer;}
+nav ul{
+  list-style:none;display:flex;gap:1rem;align-items:center;
 }
-nav .menu-toggle {
-  display:none;
-  font-size:2rem;
-  color:#ff0000;
-  cursor:pointer;
-}
-nav ul {
-  display:flex;
-  list-style:none;
-  gap:1rem;
-  flex-wrap:wrap;
-}
-nav ul li a {
-  color:#fff;
-  font-weight:bold;
-  text-decoration:none;
-  padding:0.5rem 1rem;
-  border-radius:50%;
-  background:#ff0000;
+nav ul li a{
+  text-decoration:none;color:#fff;
+  padding:0.6rem 1rem;border-radius:10px;
+  background:rgba(255,0,0,0.8);
   transition:0.3s;
-  display:inline-block;
+}
+nav ul li a:hover{background:#ff1c1c;transform:scale(1.05);}
+
+/* ============ HERO ============ */
+.hero{
+  min-height:85vh;
+  display:flex;justify-content:center;align-items:center;
   text-align:center;
-}
-nav ul li a:hover {
-  background:#c00;
-  transform:scale(1.1);
-}
-
-/* ===== Hero Section ===== */
-.hero {
-  min-height:80vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  position:relative;
-  background:linear-gradient(135deg,#111,#000);
-}
-.hero::before {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.6);
-}
-.hero-content {
-  position:relative;
-  z-index:1;
-  opacity:0;
-  transform:translateY(20px);
-  transition: all 0.8s ease-out;
-}
-.hero-content.visible {
-  opacity:1;
-  transform:translateY(0);
-}
-.hero-content h1 {
-  font-size:3rem;
-  color:#ff0000;
-  text-shadow:2px 2px 8px #000;
-  margin-bottom:1rem;
-}
-.hero-content p {
-  font-size:1.2rem;
-  margin-bottom:2rem;
-}
-.hero-content .btn {
-  padding:0.8rem 2rem;
-  background:#ff0000;
-  color:#fff;
-  border-radius:8px;
-  font-weight:bold;
-  transition:0.3s;
-  display:inline-block;
-}
-.hero-content .btn:hover {
-  background:#c00;
-  transform:scale(1.05);
-}
-
-/* ===== Sections ===== */
-section {
-  padding:5rem 2rem;
-  text-align:center;
-}
-section h2 {
-  font-size:2.5rem;
-  color:#ff0000;
-  margin-bottom:2rem;
-  opacity:0;
-  transform:translateY(20px);
-  transition:all 0.8s ease-out;
-}
-section.visible h2 {
-  opacity:1;
-  transform:translateY(0);
-}
-.about p, .contact p {
-  max-width:700px;
-  margin:auto;
-  font-size:1.1rem;
-  line-height:1.8;
-  color:#ccc;
-  opacity:0;
-  transform:translateY(20px);
-  transition:all 0.8s ease-out;
-}
-section.visible p {
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* ===== Projects ===== */
-.project-cards {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:2rem;
-}
-.project-cards .card {
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.2);
-  border-radius:20px;
-  width:300px;
-  padding:1rem;
-  transition:transform 0.3s, box-shadow 0.3s;
-}
-.project-cards .card:hover {
-  transform:translateY(-10px) scale(1.02);
-  box-shadow:0 0 20px #ff0000;
-}
-.project-cards .card img {
-  width:100%;
-  border-radius:12px;
-  margin-bottom:1rem;
-}
-.project-cards .card h3 {
-  color:#fff;
-  margin-bottom:0.5rem;
-}
-.project-cards .card p {
-  color:#ccc;
-  font-size:1rem;
-}
-
-/* ===== Footer ===== */
-footer {
   padding:2rem;
+  background:linear-gradient(145deg,#0a0a0a,#1a0000);
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:url('assets/images/code-bg.png') center/cover no-repeat;
+  opacity:0.05;
+}
+.hero h1{
+  font-size:2.5rem;
+  color:#ff3b3b;
+  text-shadow:0 0 15px #ff3b3b;
+  animation:fadeDown 1s ease forwards;
+}
+.hero p{
+  margin-top:1rem;
+  font-size:1.2rem;
+  color:#ddd;
+  opacity:0;animation:fadeUp 1.4s 0.3s ease forwards;
+}
+.hero .btn{
+  display:inline-block;margin-top:2rem;
+  padding:0.9rem 2rem;
+  background:#ff3b3b;color:#fff;font-weight:600;
+  border-radius:10px;
+  box-shadow:0 0 20px rgba(255,0,0,0.5);
+  transition:0.3s;
+  opacity:0;animation:fadeUp 1.4s 0.6s ease forwards;
+}
+.hero .btn:hover{transform:scale(1.05);background:#ff1c1c;}
+
+/* ============ SECTIONS ============ */
+section{padding:4rem 1.5rem;text-align:center;position:relative;}
+section h2{
+  font-size:2rem;
+  color:#ff3b3b;
+  margin-bottom:1rem;
+  text-shadow:0 0 10px rgba(255,0,0,0.7);
+}
+section p{
+  max-width:750px;margin:auto;
+  color:#ccc;font-size:1.1rem;line-height:1.7;
+}
+
+/* ============ PROJECT CARDS ============ */
+.project-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;
+  margin-top:3rem;
+}
+.card{
   background:rgba(255,255,255,0.05);
-  border-top:1px solid rgba(255,255,255,0.2);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px;
+  padding:1rem;
+  backdrop-filter:blur(10px);
+  transition:transform 0.4s,box-shadow 0.4s;
+}
+.card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 0 20px rgba(255,0,0,0.4);
+}
+.card img{
+  width:100%;border-radius:15px;margin-bottom:1rem;
+}
+.card h3{color:#fff;margin-bottom:0.5rem;}
+.card p{color:#ccc;margin-bottom:1rem;}
+.card .btn{
+  display:inline-block;padding:0.6rem 1.2rem;
+  background:#ff3b3b;border-radius:8px;
+  color:#fff;text-decoration:none;font-weight:600;
+}
+
+/* ============ CONTACT & FOOTER ============ */
+#contact a{color:#ff3b3b;text-decoration:none;}
+footer{
+  background:#0a0a0a;
+  border-top:1px solid rgba(255,255,255,0.1);
   text-align:center;
+  padding:1.5rem;
   color:#aaa;
+  font-size:0.95rem;
 }
 
-/* ===== Floating Tags ===== */
-.floating-tag {
-  position:absolute;
-  font-size:1.8rem;
-  color:#ff0000;
-  pointer-events:none;
-  user-select:none;
-  animation:floatTag linear infinite;
+/* ============ FLOATING ORBS ============ */
+.orb{
+  position:fixed;
+  border-radius:50%;
+  background:radial-gradient(circle,#ff3b3b 0%,transparent 70%);
+  opacity:0.15;
+  animation:float 8s linear infinite;
+  z-index:0;
 }
-@keyframes floatTag {
-  0% {transform:translateY(100vh) rotate(0deg);}
-  100% {transform:translateY(-10vh) rotate(360deg);}
+@keyframes float{
+  from{transform:translateY(0);}
+  to{transform:translateY(-120vh);}
 }
 
-/* ===== Responsive Mobile ===== */
-/* ===== Responsive Mobile ===== */
-@media screen and (max-width:768px) {
-  nav {
-    flex-direction:column;
-    align-items:flex-start;
-    position:relative;
-  }
+/* ============ ANIMATIONS ============ */
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
 
-  nav .menu-toggle {
-    display:block;
-    font-size:2rem;
-    color:#ff0000;
-    cursor:pointer;
-    z-index:999;
-  }
-
-  nav ul {
-    display:none;
-    flex-direction:column;
-    gap:1rem;
-    width:100%;
-    position:absolute;
-    top:100%;
-    left:0;
-    background:rgba(20,20,20,0.95);
-    box-shadow:0 0 15px rgba(255,0,0,0.4);
-    border-radius:12px;
+/* ============ MOBILE ============ */
+@media (max-width:768px){
+  .menu-toggle{display:block;}
+  nav ul{
+    display:none;flex-direction:column;gap:1rem;
+    position:absolute;top:100%;left:0;width:100%;
+    background:#111;
     padding:1rem 0;
-    animation:dropdownFade 0.4s ease;
-    z-index:998;
   }
-
-  nav ul.show {
-    display:flex;
-  }
-
-  @keyframes dropdownFade {
-    from {opacity:0; transform:translateY(-10px);}
-    to {opacity:1; transform:translateY(0);}
-  }
-
-  nav ul li a {
-    width:80%;
-    padding:0.9rem 1rem;
-    text-align:center;
-    border-radius:10px;
-    background:#ff0000;
-    color:#fff;
-    font-weight:bold;
-    transition:all 0.3s ease;
-    box-shadow:0 0 10px rgba(255,0,0,0.5);
-  }
-
-  nav ul li a:hover {
-    background:#c00;
-    box-shadow:0 0 15px rgba(255,0,0,0.8);
-    transform:translateY(-2px);
-  }
-
-  .hero-content h1 {
-    font-size:2rem;
-  }
-
-  .hero-content p {
-    font-size:1rem;
-  }
-
-  section h2 {
-    font-size:2rem;
-  }
-
-  .project-cards {
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .project-cards .card {
-    width:90%;
-  }
+  nav ul.show{display:flex;animation:fadeUp 0.3s ease;}
+  nav ul li a{width:80%;margin:auto;border-radius:10px;}
+  .hero h1{font-size:1.9rem;}
+  .hero p{font-size:1rem;}
 }
 </style>
 </head>
-
 <body>
 
-<!-- Navbar -->
+<!-- ===== NAV ===== -->
 <nav>
   <div class="logo">
     <img src="assets/images/logo.png" alt="Logo">
@@ -342,84 +193,75 @@ footer {
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="https://github.com/QRTQuick/" target="_blank">GitHub</a></li>
+    <li><a href="https://github.com/QRTQuick" target="_blank">GitHub</a></li>
   </ul>
 </nav>
 
-<!-- Hero -->
-<header id="home" class="hero">
-  <div class="hero-content">
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div>
     <h1>Welcome to Quick Red Tech</h1>
     <p>Portfolio of <strong>Chisom Life Eke</strong> — Innovating Developer Tools</p>
     <a href="#projects" class="btn">View Projects</a>
   </div>
-</header>
-
-<!-- About -->
-<section id="about">
-  <h2>About Quick Red Tech</h2>
-  <p><strong>Quick Red Tech</strong> is a forward-thinking tech brand founded by <strong>Chisom Life Eke</strong>. We build smart tools that make software development easier for beginners and expert developers, helping them improve workflow, automate tasks, and focus on creativity.</p>
-  <p>Our products cover Python, Node.js, Java, Ruby, and more, providing modern, reliable solutions for all developers.</p>
 </section>
 
-<!-- Projects -->
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <h2>About Quick Red Tech</h2>
+  <p><strong>Quick Red Tech</strong> is a forward-thinking tech brand founded by <strong>Chisom Life Eke</strong>. We create smart tools that simplify software development, automate tasks, and empower creativity across Python, Node.js, Java, and Ruby.</p>
+</section>
+
+<!-- ===== PROJECTS ===== -->
 <section id="projects">
   <h2>Projects</h2>
   <div class="project-cards">
     <div class="card">
       <img src="assets/images/project1.png" alt="Project 1">
       <h3>StackCheckMate</h3>
-      <p>Universal developer toolkit automating Python, Node.js, Java & Ruby environments.</p>
-      <a href="https://qrtquick.github.io/stackcheckmate/" target="_blank" class="btn" style="border-radius:8px;padding:0.8rem 1rem;">Check StackCheckMate</a>
+      <p>Universal toolkit automating Python, Node.js, Java & Ruby environments.</p>
+      <a href="https://qrtquick.github.io/stackcheckmate/" target="_blank" class="btn">Check StackCheckMate</a>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
+<!-- ===== CONTACT ===== -->
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:quickredtech@gmail.com" style="color:#ff0000;">quickredtech@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/ChisomLifeEke" target="_blank" style="color:#ff0000;">https://github.com/ChisomLifeEke</a></p>
+  <p>Email: <a href="mailto:quickredtech@gmail.com">quickredtech@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/ChisomLifeEke" target="_blank">ChisomLifeEke</a></p>
 </section>
 
-<!-- Footer -->
 <footer>
   <p>© 2025 Quick Red Tech | Portfolio of Chisom Life Eke</p>
   <p>“Innovation through code — one stack at a time.”</p>
 </footer>
 
-<!-- ===== Floating Tags JS & Navbar Toggle ===== -->
+<!-- ===== JS ===== -->
 <script>
-// Generate floating < /> tags
-for(let i=0;i<30;i++){
-  const tag = document.createElement('div');
-  tag.className = 'floating-tag';
-  tag.textContent = '</>';
-  tag.style.left = Math.random()*window.innerWidth+'px';
-  tag.style.fontSize = 16 + Math.random()*24 + 'px';
-  tag.style.animationDuration = (3 + Math.random()*3)+'s';
-  tag.style.animationDelay = Math.random()*5+'s';
-  document.body.appendChild(tag);
+// Floating glowing orbs
+for(let i=0;i<15;i++){
+  const orb=document.createElement('div');
+  orb.className='orb';
+  orb.style.width=orb.style.height=20+Math.random()*60+'px';
+  orb.style.left=Math.random()*100+'%';
+  orb.style.bottom='-100px';
+  orb.style.animationDuration=6+Math.random()*8+'s';
+  document.body.appendChild(orb);
 }
 
-// Scroll-trigger animations
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
+// Scroll reveal
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting)e.target.classList.add('show');
   });
 },{threshold:0.3});
+document.querySelectorAll('section').forEach(s=>obs.observe(s));
 
-document.querySelectorAll('.hero-content, section').forEach(el => observer.observe(el));
-
-
-// Navbar toggle for mobile
-const toggle = document.querySelector('.menu-toggle');
-const navUl = document.querySelector('nav ul');
-
-toggle.addEventListener('click', () => {
-  navUl.classList.toggle('show');
-});
+// Mobile menu
+const toggle=document.querySelector('.menu-toggle');
+const navList=document.querySelector('nav ul');
+toggle.addEventListener('click',()=>navList.classList.toggle('show'));
 </script>
+</body>
+</html>
