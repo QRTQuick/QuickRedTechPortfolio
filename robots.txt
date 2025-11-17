@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# Canonical sitemap for the site
 Sitemap: https://qrtquick.github.io/QuickRedTechPortfolio/sitemap.xml
+
+# Useful crawl-delay for polite crawling (seconds)
+# Crawl-delay: 5
+
+# If you add staging or private folders, add rules here, for example:
+# Disallow: /private/

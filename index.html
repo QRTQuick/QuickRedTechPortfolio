@@ -6,6 +6,10 @@
 <title>Quick Red Tech | Portfolio of Chisom Life Eke</title>
 <link rel="icon" href="assets/images/logo.png" type="image/png">
 
+  <!-- Google Font + main stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
 <!-- =========================================================
    🔍 SEO + Google AI Overview + Branding Metadata
    ========================================================= -->
@@ -41,7 +45,7 @@
   "founder": {
     "@type": "Person",
     "name": "Chisom Life Eke",
-    "url": "https://qrtquick.github.io/",
+    "url": "https://qrtquick.github.io/",  
     "sameAs": [
       "https://github.com/QRTQuick",
       "https://linkedin.com/in/chisomlifeeke"
@@ -53,166 +57,7 @@
 }
 </script>
 
-<style>
-/* ============ RESET & BASE ============ */
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
-body{
-  background:radial-gradient(circle at top,#0a0a0a 60%,#000);
-  color:#fff;
-  overflow-x:hidden;
-  position:relative;
-}
-
-/* ============ NAVBAR ============ */
-nav{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:1rem 1.2rem;
-  backdrop-filter:blur(10px);
-  background:rgba(10,10,10,0.6);
-  border-bottom:1px solid rgba(255,255,255,0.1);
-  position:sticky;top:0;z-index:999;
-}
-.logo{
-  display:flex;align-items:center;gap:0.6rem;font-weight:700;
-}
-.logo img{width:42px;height:42px;border-radius:12px;}
-.menu-toggle{display:none;font-size:2rem;color:#ff3b3b;cursor:pointer;}
-nav ul{
-  list-style:none;display:flex;gap:1rem;align-items:center;
-}
-nav ul li a{
-  text-decoration:none;color:#fff;
-  padding:0.6rem 1rem;border-radius:10px;
-  background:rgba(255,0,0,0.8);
-  transition:0.3s;
-}
-nav ul li a:hover{background:#ff1c1c;transform:scale(1.05);}
-
-/* ============ HERO ============ */
-.hero{
-  min-height:85vh;
-  display:flex;justify-content:center;align-items:center;
-  text-align:center;
-  padding:2rem;
-  background:linear-gradient(145deg,#0a0a0a,#1a0000);
-  position:relative;
-  overflow:hidden;
-}
-.hero::before{
-  content:"";position:absolute;inset:0;
-  background:url('assets/images/code-bg.png') center/cover no-repeat;
-  opacity:0.05;
-}
-.hero h1{
-  font-size:2.5rem;
-  color:#ff3b3b;
-  text-shadow:0 0 15px #ff3b3b;
-  animation:fadeDown 1s ease forwards;
-}
-.hero p{
-  margin-top:1rem;
-  font-size:1.2rem;
-  color:#ddd;
-  opacity:0;animation:fadeUp 1.4s 0.3s ease forwards;
-}
-.hero .btn{
-  display:inline-block;margin-top:2rem;
-  padding:0.9rem 2rem;
-  background:#ff3b3b;color:#fff;font-weight:600;
-  border-radius:10px;
-  box-shadow:0 0 20px rgba(255,0,0,0.5);
-  transition:0.3s;
-  opacity:0;animation:fadeUp 1.4s 0.6s ease forwards;
-}
-.hero .btn:hover{transform:scale(1.05);background:#ff1c1c;}
-
-/* ============ SECTIONS ============ */
-section{padding:4rem 1.5rem;text-align:center;position:relative;}
-section h2{
-  font-size:2rem;
-  color:#ff3b3b;
-  margin-bottom:1rem;
-  text-shadow:0 0 10px rgba(255,0,0,0.7);
-}
-section p{
-  max-width:750px;margin:auto;
-  color:#ccc;font-size:1.1rem;line-height:1.7;
-}
-
-/* ============ PROJECT CARDS ============ */
-.project-cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:2rem;
-  margin-top:3rem;
-}
-.card{
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.1);
-  border-radius:20px;
-  padding:1rem;
-  backdrop-filter:blur(10px);
-  transition:transform 0.4s,box-shadow 0.4s;
-}
-.card:hover{
-  transform:translateY(-8px) scale(1.02);
-  box-shadow:0 0 20px rgba(255,0,0,0.4);
-}
-.card img{
-  width:100%;border-radius:15px;margin-bottom:1rem;
-}
-.card h3{color:#fff;margin-bottom:0.5rem;}
-.card p{color:#ccc;margin-bottom:1rem;}
-.card .btn{
-  display:inline-block;padding:0.6rem 1.2rem;
-  background:#ff3b3b;border-radius:8px;
-  color:#fff;text-decoration:none;font-weight:600;
-}
-
-/* ============ CONTACT & FOOTER ============ */
-#contact a{color:#ff3b3b;text-decoration:none;}
-footer{
-  background:#0a0a0a;
-  border-top:1px solid rgba(255,255,255,0.1);
-  text-align:center;
-  padding:1.5rem;
-  color:#aaa;
-  font-size:0.95rem;
-}
-
-/* ============ FLOATING ORBS ============ */
-.orb{
-  position:fixed;
-  border-radius:50%;
-  background:radial-gradient(circle,#ff3b3b 0%,transparent 70%);
-  opacity:0.15;
-  animation:float 8s linear infinite;
-  z-index:0;
-}
-@keyframes float{
-  from{transform:translateY(0);}
-  to{transform:translateY(-120vh);}
-}
-
-/* ============ ANIMATIONS ============ */
-@keyframes fadeDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-
-/* ============ MOBILE ============ */
-@media (max-width:768px){
-  .menu-toggle{display:block;}
-  nav ul{
-    display:none;flex-direction:column;gap:1rem;
-    position:absolute;top:100%;left:0;width:100%;
-    background:#111;
-    padding:1rem 0;
-  }
-  nav ul.show{display:flex;animation:fadeUp 0.3s ease;}
-  nav ul li a{width:80%;margin:auto;border-radius:10px;}
-  .hero h1{font-size:1.9rem;}
-  .hero p{font-size:1rem;}
-}
-</style>
+<!-- main styles are in assets/css/styles.css -->
 </head>
 
 <body>
@@ -222,11 +67,14 @@ footer{
   <div class="logo">
     <img src="assets/images/logo.png" alt="Quick Red Tech Logo">
     <span>Quick Red Tech</span>
+    <span id="visitor-badge" style="margin-left:0.8rem;font-size:0.9rem;opacity:0.9;color:#ffdede">Visitors: <strong id="visitor-count">0</strong></span>
   </div>
   <div class="menu-toggle">&#9776;</div>
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="about.html">Company</a></li>
+    <li><a href="c++codesnippets.html">Snippets</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="https://github.com/QRTQuick" target="_blank">GitHub</a></li>
@@ -246,29 +94,89 @@ footer{
 <section id="about">
   <h2>About Quick Red Tech</h2>
   <p><strong>Quick Red Tech</strong> is a creative software innovation brand founded by <strong>Chisom Life Eke</strong>. It focuses on next-gen tools that merge artificial intelligence, performance engineering, and futuristic design to redefine how developers interact with technology. From deep system diagnostics to AI-assisted programming, Quick Red Tech builds experiences that think ahead of time.</p>
+  <p class="muted">Founder: <strong>Chisom Life Eke</strong> — Age: <strong id="founder-age">16</strong> (Nigerian)</p>
+  <p class="muted">Founded: <strong>August 12, 2024</strong></p>
 </section>
 
 <!-- ===== PROJECTS ===== -->
 <section id="projects">
-  <h2>Projects</h2>
+  <h2>our dev software</h2>
   <div class="project-cards">
     <div class="card">
-      <img src="assets/images/project1.png" alt="StackCheckMate Project">
       <h3>StackCheckMate</h3>
-      <p>Universal environment automation tool for Python, Node.js, Java & Ruby developers.</p>
+      <p>StackCheckMate is a universal environment automation tool designed to make project setup reliable across languages and platforms. It automates virtual environments, dependency pinning, reproducible builds and common setup tasks for Python, Node.js, Java, Ruby and more.</p>
+      <p><strong>Features:</strong> cross-language environment manifests, one-command setup, dependency snapshots, CI-ready reproducible steps, and templated project starters.</p>
+      <p><strong>Tech:</strong> CLI-first design, YAML manifests, small runtime shim for each platform.</p>
+      <p><strong>Use cases:</strong> onboarding new developers quickly, creating reproducible CI jobs, and managing multi-language monorepos.</p>
       <a href="https://qrtquick.github.io/stackcheckmate/" target="_blank" class="btn">View Project</a>
     </div>
+
     <div class="card">
-      <img src="assets/images/dredbot.png" alt="D-Red-Bot">
       <h3>D-Red-Bot</h3>
-      <p>Futuristic Windows-only system utility built in C++ — merges CLI and GUI memory intelligence.</p>
+      <p>D-Red-Bot is a Windows-native system utility written in C++ that blends command-line control with a compact GUI for system monitoring and memory intelligence. It provides low-level diagnostics and automated maintenance tasks for power users and system admins.</p>
+      <p><strong>Features:</strong> memory & process analysis, automated cleanup tasks, scheduler for maintenance jobs, plugin-friendly architecture for custom checks, and exportable diagnostic reports.</p>
+      <p><strong>Tech:</strong> Native C++ with Win32 APIs for high performance; optional GUI layer for quick visual insights.</p>
+      <p><strong>Use cases:</strong> diagnosing application memory issues, automating routine cleanup, and gathering reproducible system reports for debugging.</p>
       <a href="https://qrtquick.github.io/D-Red-Bot/" target="_blank" class="btn">View D-Red-Bot</a>
     </div>
+
     <div class="card">
-      <img src="assets/images/sachi.png" alt="Shinpuru-Sachi Terminal Browser">
       <h3>Shinpuru-Sachi</h3>
-      <p>Lightweight terminal browser for developers to quickly search the web directly from the command line.</p>
+      <p>Shinpuru-Sachi is a lightweight terminal browser built for developers who prefer the command-line. It enables fast web searches, link previews, and bookmarks directly from the terminal, with keyboard-first navigation and small, scriptable output.</p>
+      <p><strong>Features:</strong> quick search shortcuts, configurable search providers, bookmark management, and plain-text previews suitable for piping into tools.</p>
+      <p><strong>Tech:</strong> Terminal-first tool with concise output, designed to integrate with shell pipelines and developer workflows.</p>
+      <p><strong>Use cases:</strong> searching docs without leaving the terminal, building terminal-based workflows, and scripting web lookups in automation scripts.</p>
       <a href="https://qrtquick.github.io/Shinpuru-Sachi/" target="_blank" class="btn">View Shinpuru-Sachi</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <h2>Services</h2>
+  <p>We deliver a wide range of software services and developer tools tailored to modern workflows.</p>
+  <div class="project-cards">
+    <div class="card">
+      <div class="card-icon">🌐</div>
+      <h3>Web Development</h3>
+      <p>Responsive websites, modern web apps, and SPAs that prioritize performance, accessibility and SEO. We deliver static and dynamic architectures, API integrations, Progressive Web Apps (PWAs), and CMS-driven sites.</p>
+      <p><strong>Typical deliverables:</strong> responsive UI, SEO optimization, API integration, deployment pipeline.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎮</div>
+      <h3>Game Development</h3>
+      <p>Tooling and small-to-medium game projects with focus on gameplay systems, editor tools, and cross-platform builds. Ideal for indie teams needing rapid prototyping and reliable build pipelines.</p>
+      <p><strong>Typical deliverables:</strong> gameplay prototypes, build automation, editor tooling, performance tuning.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <h3>App Development</h3>
+      <p>Mobile and desktop applications built with native or cross-platform frameworks. We focus on polished UX, offline-first behavior, and maintainable codebases for long-term product growth.</p>
+      <p><strong>Typical deliverables:</strong> production-ready app, CI/CD, platform packaging, analytics integration.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🛠️</div>
+      <h3>System / Native Tools</h3>
+      <p>Low-level system utilities, native tooling and performance-critical applications implemented with a focus on reliability and resource efficiency. Suitable for platform-specific agents and diagnostic tools.</p>
+      <p><strong>Typical deliverables:</strong> native binaries, installers, monitoring hooks and native integrations.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🆓</div>
+      <h3>Free Software & Open Source</h3>
+      <p>Open-source utilities and community-first projects that provide value to developers without a paywall. We publish clear documentation and encourage contributions.</p>
+      <p><strong>Typical deliverables:</strong> OSS repo, documentation, examples, permissive licensing guidance.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤖</div>
+      <h3>Automation & Developer Tools</h3>
+      <p>Automation tools, CI/CD helpers, and developer productivity utilities that reduce repetitive work. We prioritize auditable automation and local-first operation to respect privacy and control.</p>
+      <p><strong>Typical deliverables:</strong> automation scripts, CLI tools, CI templates, integration guides.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔧</div>
+      <h3>Custom Software Solutions</h3>
+      <p>Custom-built software for a variety of life and business needs: internal tools, integrations, and domain-specific applications designed to solve practical problems.</p>
+      <p><strong>Typical deliverables:</strong> scoped prototype, roadmap, MVP, and production handoff.</p>
     </div>
   </div>
 </section>
@@ -286,30 +194,6 @@ footer{
 </footer>
 
 <!-- ===== JS ===== -->
-<script>
-// Floating orbs
-for(let i=0;i<15;i++){
-  const orb=document.createElement('div');
-  orb.className='orb';
-  orb.style.width=orb.style.height=20+Math.random()*60+'px';
-  orb.style.left=Math.random()*100+'%';
-  orb.style.bottom='-100px';
-  orb.style.animationDuration=6+Math.random()*8+'s';
-  document.body.appendChild(orb);
-}
-
-// Scroll reveal
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting)e.target.classList.add('show');
-  });
-},{threshold:0.3});
-document.querySelectorAll('section').forEach(s=>obs.observe(s));
-
-// Mobile nav
-const toggle=document.querySelector('.menu-toggle');
-const navList=document.querySelector('nav ul');
-toggle.addEventListener('click',()=>navList.classList.toggle('show'));
-</script>
+<script src="assets/js/scripts.js" defer></script>
 </body>
 </html>
