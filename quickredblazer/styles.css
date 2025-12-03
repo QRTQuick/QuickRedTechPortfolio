@@ -1,0 +1,43 @@
+:root{--bg:#071018;--panel:#0b1220;--accent:#ff2b2b;--muted:#9fb0c1}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#e6eef6;font-family:Inter,Segoe UI,Arial,sans-serif}
+.qrb-app{max-width:980px;margin:0 auto;padding:14px}
+.qrb-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.qrb-brand{display:flex;gap:12px;align-items:center}
+.qrb-logo{width:72px;height:72px;border-radius:12px}
+.qrb-header h1{color:var(--accent);font-size:1.1rem;margin:0}
+.muted{color:var(--muted);font-size:0.95rem;margin:0}
+.btn{background:var(--accent);color:#111;border:none;padding:8px 12px;border-radius:8px;font-weight:600}
+.btn.ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04)}
+
+.qrb-shell{display:flex;gap:12px}
+.qrb-files{display:flex;flex-direction:column;gap:8px;min-width:110px}
+.qrb-files button{background:transparent;border:1px solid rgba(255,255,255,0.04);color:#e6eef6;padding:8px;border-radius:8px;text-align:left}
+.qrb-files button.active{background:linear-gradient(90deg,rgba(255,43,43,0.12),rgba(107,0,255,0.04));border-color:rgba(255,43,43,0.18)}
+
+.qrb-editor-area{flex:1;display:flex;flex-direction:column}
+.qrb-toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.qrb-current{color:var(--muted)}
+.qrb-toggle .small{padding:6px 8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted);margin-left:6px}
+.qrb-toggle .small.active{background:rgba(255,255,255,0.03);color:#fff}
+
+#editor{width:100%;min-height:220px;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:#021320;color:#e6eef6;font-family:Consolas,monospace;resize:vertical}
+.preview-wrap{margin-top:8px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.04);background:#fff}
+#preview{width:100%;height:360px;border:0}
+
+/* Mobile-first: stack files and editor; allow preview toggle */
+@media (max-width:720px){
+  .qrb-app{padding:12px}
+  .qrb-shell{flex-direction:column}
+  .qrb-files{flex-direction:row;overflow:auto;min-width:unset}
+  .qrb-files button{flex:0 0 auto}
+  #editor{min-height:320px}
+  #preview{height:520px}
+}
+
+@media (min-width:980px){
+  .qrb-files{flex:0 0 180px}
+  .qrb-shell{align-items:flex-start}
+  #editor{min-height:420px}
+  #preview{height:520px}
+}
