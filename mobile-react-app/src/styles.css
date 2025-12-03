@@ -1,0 +1,16 @@
+:root{--bg:#071018;--accent:#ff2b2b;--muted:#9fb0c1}
+*{box-sizing:border-box}
+body,html,#root{height:100%;margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:#e6eef6}
+.app{display:flex;flex-direction:column;min-height:100vh}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:#08121a}
+.brand{color:var(--accent);font-weight:700}
+.page{padding:12px}
+.section{margin-bottom:18px}
+.home .lead{color:var(--muted)}
+.btn{display:inline-block;padding:8px 12px;background:var(--accent);color:#111;border-radius:8px;text-decoration:none}
+.card{background:#0b1220;padding:12px;border-radius:8px;margin:8px 0}
+
+/* Mobile-first layout tweaks */
+@media(min-width:720px){
+  .app{max-width:720px;margin:0 auto}
+}

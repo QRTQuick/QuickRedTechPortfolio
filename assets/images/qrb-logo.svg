@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="QRB logo">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff3b3b"/>
+      <stop offset="0.45" stop-color="#b14bff"/>
+      <stop offset="1" stop-color="#28b4ff"/>
+    </linearGradient>
+    <filter id="f" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="18" flood-color="#0b1220" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- rounded rect background -->
+  <rect x="24" y="24" width="464" height="464" rx="48" fill="#041018" />
+
+  <!-- neon gradient stroke -->
+  <rect x="24" y="24" width="464" height="464" rx="48" fill="none" stroke="url(#g)" stroke-width="6" opacity="0.9" filter="url(#f)" />
+
+  <!-- subtle inner glow -->
+  <rect x="44" y="44" width="424" height="424" rx="36" fill="url(#g)" opacity="0.06" />
+
+  <!-- QRB monogram -->
+  <g transform="translate(0,18)">
+    <text x="50%" y="54%" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="800" font-size="220" fill="url(#g)" stroke="#071018" stroke-width="6" paint-order="stroke" style="filter: drop-shadow(0 8px 18px rgba(11,18,24,0.6));">
+      QRB
+    </text>
+  </g>
+
+</svg>

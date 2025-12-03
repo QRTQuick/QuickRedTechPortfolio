@@ -1,0 +1,54 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Vite / build
+dist/
+build/
+.vite/
+.parcel-cache/
+
+# Env files
+.env
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows image file caches
+ehthumbs.db
+
+# QuickRedBlazer / Google Apps Script build artefacts
+*.gsproj
+
+# Mobile React app
+mobile-react-app/node_modules/
+mobile-react-app/dist/
+mobile-react-app/build/
+
+# OneDrive / Office temp
+~$*

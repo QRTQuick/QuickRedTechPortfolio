@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="QRB logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff2b2b"/>
+      <stop offset="1" stop-color="#8a2be2"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="48" fill="#071018"/>
+  <g transform="translate(64,128)">
+    <rect x="0" y="0" width="384" height="256" rx="24" fill="url(#g)" opacity="0.12" />
+    <text x="192" y="160" text-anchor="middle" font-family="Segoe UI,Arial" font-size="120" fill="#ff2b2b" font-weight="700">QRB</text>
+  </g>
+</svg>
