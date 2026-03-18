@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-red: #ff3b3b;
+  --color-brand-black: #0a0a0a;
+  --color-brand-silver: #e5e5e5;
+  --color-brand-dark: #050505;
+  --color-brand-teasel: #6a4a5e;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-brand-silver antialiased selection:bg-brand-red selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold tracking-tight text-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-brand-red text-white font-bold rounded-lg hover:bg-red-600 transition-colors duration-200 flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-white/10 text-white font-bold rounded-lg hover:bg-white/20 transition-colors duration-200 flex items-center gap-2 border border-white/10;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
