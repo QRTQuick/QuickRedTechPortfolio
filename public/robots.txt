@@ -2,10 +2,7 @@ User-agent: *
 Allow: /
 
 # Canonical sitemap for the site
-Sitemap: https://quick-red-tech.vercel.app/
+Sitemap: https://quick-red-tech.vercel.app/sitemap.xml
 
-# Useful crawl-delay for polite crawling (seconds)
+# Optional polite crawling delay (seconds)
 # Crawl-delay: 3
-
-# If you add staging or private folders, add rules here, for example:
-# Disallow: /private/
