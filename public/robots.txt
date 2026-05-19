@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# Canonical sitemap for the site
-Sitemap: https://quick-red-tech.vercel.app/sitemap.xml
-
-# Optional polite crawling delay (seconds)
-# Crawl-delay: 3
